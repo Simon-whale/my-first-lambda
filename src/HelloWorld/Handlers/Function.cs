@@ -25,7 +25,7 @@ namespace HelloWorld.Handlers
         private Function(INetworkServices networkServices = null)
         {
             Startup.ConfigureServices();
-            this._networkServices = networkServices ?? Startup.Services.GetRequiredService<INetworkServices>();
+            _networkServices = networkServices ?? Startup.Services.GetRequiredService<INetworkServices>();
         }
 
         public async Task<APIGatewayProxyResponse> FunctionHandler(APIGatewayProxyRequest apiProxyEvent, ILambdaContext context)

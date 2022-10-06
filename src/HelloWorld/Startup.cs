@@ -12,6 +12,7 @@ public static class Startup
     {
         var serviceCollection = new ServiceCollection();
         serviceCollection.AddSingleton<INetworkServices, NetworkServices>();
+        serviceCollection.AddSingleton<IPersonStore, PersonsStore>();
         Services = serviceCollection.BuildServiceProvider();
     }
 }
